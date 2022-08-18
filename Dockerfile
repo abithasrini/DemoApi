@@ -1,7 +1,5 @@
 ﻿FROM mcr.microsoft.com/dotnet/runtime-deps:6.0-alpine AS base
 WORKDIR /app
-EXPOSE 80
-EXPOSE 443
 
 RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /app
 USER appuser
